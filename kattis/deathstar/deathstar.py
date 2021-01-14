@@ -1,5 +1,4 @@
 # https://open.kattis.com/problems/deathstar
-
 import sys
 
 n = sys.stdin.readline()
