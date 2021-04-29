@@ -58,7 +58,18 @@ def romantoint(s):
     print(total)
     return total
 
+def romantoint_second(s):
+    numeral_map = {"I": 1, "V": 5, "X": 10, "L": 50, "C":100, "D": 500, "M": 1000}
+    total = 0
+    for i in range(len(s)):
+        if i > 0 and numeral_map[s[i]] > numeral_map[s[i - 1]]:
+            total += numeral_map[s[i]] - 2 * numeral_map[s[i - 1]]
+        else:
+            total += numeral_map[s[i]]
+    print(total)
+    return total
+
 if __name__ == '__main__':
     # Example 1
     s = "MCMXCIV"
-    romantoint(s)
+    romantoint_second(s)
