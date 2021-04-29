@@ -1,7 +1,7 @@
 # https://leetcode.com/problems/reverse-integer/
-def reverseinteger(num):
+def reverseinteger(x):
     total = 0
-    converted_num = str(num) 
+    converted_num = str(x) 
     multiplier = 1
     negative = False
     for i in range(len(converted_num)):
@@ -29,8 +29,16 @@ def reverseinteger(num):
     print(total)
     return total
 
+def reverseinteger_second(x):
+    tem = int(str(x)[::-1])  if x > 0 else -int(str(abs(x))[::-1])
+
+    if (tem < (-2**31) or tem > (2**31 -1)):
+        tem = 0
+
+    print(tem)
+    return tem
 
 if __name__ == '__main__':
     # Example 1
     exampleInteger = 901000
-    reverseinteger(exampleInteger)
+    reverseinteger_second(exampleInteger)
