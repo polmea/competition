@@ -1,4 +1,10 @@
 # Things to study
+## Search
+
+### DFS
+
+### BFS
+
 
 ## Trees
 ### Binary Tree
